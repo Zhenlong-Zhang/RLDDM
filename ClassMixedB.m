@@ -1,3 +1,6 @@
+## RLDDM but given distruction to only fit RL
+
+
 classdef ClassMixedB
     properties
         Choice          
