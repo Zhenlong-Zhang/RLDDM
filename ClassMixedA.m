@@ -1,3 +1,6 @@
+## RLDDM but onlt fit ddm part, rl is using random instead
+
+
 classdef ClassMixedA < handle
     properties
         Choice       % 真实数据中的选择 (1或2)
