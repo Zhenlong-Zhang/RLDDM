@@ -1,3 +1,6 @@
+## very basic rlddm model rl part has only learning rate, ddm part only has decision boundry, k for the difference in q value, and t0 for non decision time. 
+## p(chioce) is 1 / (1 + exp(-1 * v * a)), and rt is using decision boundry and drift rate(found by k) to build a distrution in inverseGaussian
+
 classdef ClassBasicRLDDM
     properties
         Choice          
