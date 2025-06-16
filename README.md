@@ -29,14 +29,21 @@ venv\Scripts\activate      # Windows
 ## Python Setup
 You can install the required Python libraries in two ways:
 
-### Option 1: Using requirements.txt (recommended)
+### Option 1: Using requirements.txt
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Option 2: Install directly from within each notebook
-Each Jupyter notebook includes a **!pip install** cell at the top\.
+Each Jupyter notebook includes a **!pip install** cell at the top.
+
+### Option 3: Using environment.yml with conda
+```bash
+conda env create -f environment.yml
+conda activate rlddm-env
+```
+This will install all required packages and Python version as specified in the YAML file.
 
 ## Matlab Setup
 
