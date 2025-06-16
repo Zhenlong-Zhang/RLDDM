@@ -22,11 +22,11 @@ venv\Scripts\activate      # Windows
 
 ## File Structure
 
-### MATLAB scripts: for data cleaning and model fitting.
+- MATLAB scripts: for data cleaning and model fitting.
 
-### Python notebooks: for model comparison, parameter correlation, parameter analysis, and graphing.
+- Python notebooks: for model comparison, parameter correlation, parameter analysis, and graphing.
 
-### requirements.txt: lists Python dependencies (see below for setup instructions).
+- requirements.txt: lists Python dependencies (see below for setup instructions).
 
 ## MATLAB Setup
 
