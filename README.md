@@ -18,7 +18,7 @@ This project contains both **MATLAB** and **Python** scripts/notebooks for model
 git clone https://github.com/Zhenlong-Zhang/RLDDM.git
 cd RLDDM
 ```
-### (Optional) Create and activate a virtual environment for python useage
+### (Optional) Create and activate a virtual environment for later local python useage
 
 ```bash
 python3 -m venv venv
