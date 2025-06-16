@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 
 ### Option 2: Install directly from within each notebook
-Each Jupyter notebook includes a !pip install cell at the top\.
+Each Jupyter notebook includes a **!pip install** cell at the top\.
 
 ## Matlab Setup
 
