@@ -27,7 +27,7 @@ venv\Scripts\activate      # Windows
 ```
 
 ## Python Setup
-You can install the required Python libraries in two ways:
+You can install the required Python libraries in three ways:
 
 ### Option 1: Using requirements.txt
 
