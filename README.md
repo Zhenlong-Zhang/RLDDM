@@ -44,7 +44,7 @@ Each Jupyter notebook includes a **!pip install** cell at the top\.
   
 - Required toolbox: Optimization Toolbox (for fmincon)
 
-### Matlab Usage
+## Matlab Usage
 - Place all data files and .m scripts in the same working folder.
 
 - No need to configure any paths.
