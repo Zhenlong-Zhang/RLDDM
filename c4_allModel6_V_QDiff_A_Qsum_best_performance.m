@@ -1,5 +1,7 @@
 % this is the best fitting method done in fminunc
 % all A, W, K analyse graph will be using the graph from this one
+% v= k* Qdiff
+% a= a-w*qsum
 
 function rlddm_fit_fixed_alpha_by_section_fminunc
     clear; clc;
