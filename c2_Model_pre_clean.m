@@ -1,5 +1,8 @@
-% this is for seeing the distribution of all session of all trails with no pre cleaning.
-% this output shows that the last 5 percent(last bin) shows the higest unengagement
+% this is for taking out the last bin of all session before fitting
+% To run the model on different latency types, please update dataMat{:,x}. see below
+% Column 5(dataMat{:,5})corresponds to initial latency; column 6 (dataMat{:,6})corresponds to choice latency.
+
+
 clear; clc;
 filePath = 'EphysMaleFemaleAirData.mat';
 dataStruct = load(filePath);
@@ -27,10 +30,12 @@ for i = 1:numel(ratFields)
         if istable(dataMat)
             choice = dataMat{:,1};
             reward = dataMat{:,2};
+            % change to rt = dataMat{:,6};to see for choice latency. 5 is c init latency and 6 is choice
             rt = dataMat{:,5};
         else
             choice = dataMat(:,1);
             reward = dataMat(:,2);
+            % change to rt = dataMat(:,6); to see for choice latency. 
             rt = dataMat(:,5);
         end
 

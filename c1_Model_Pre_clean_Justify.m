@@ -1,4 +1,7 @@
-% this is for taking out the last bin of all session before fitting
+% This script is for visualizing the distribution of all sessions across all trials without pre-cleaning.
+% It is used to inspect the overall data distribution.
+% The last 5 percent (last bin) shows the highest unengagement.
+% To switch between latency types, change dataMat{:,5} to dataMat{:,6} (initial latency vs. choice latency).
 
 load('EphysMaleFemaleAirData.mat');
 allRats = fieldnames(res.concat_data);  
@@ -17,6 +20,7 @@ for i = 1:numel(allRats)
         dataMat = res.concat_data.(rat){sec};
         if isempty(dataMat), continue; end
         if istable(dataMat)
+        % change dataMat{:,5} to dataMat{:,6} to see choice latency
             initRT = dataMat{:,5};
         else
             initRT = dataMat(:,5);
