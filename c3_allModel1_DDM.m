@@ -45,9 +45,7 @@ function ddm_fit_by_section_fminunc
             realParams = [ ...
                 10 / (1 + exp(-safeLog(bestParams(1)))), ...  % k  (0,10)
                 10 / (1 + exp(-safeLog(bestParams(2)))), ...  % a  (0,10)
-                1  / (1 + exp(-safeLog(bestParams(3)))), ...  % T  (0,1)
-                bestParams(4)                               % w 
-            ];
+                1  / (1 + exp(-safeLog(bestParams(3))))];
             
  
             all_results(end+1, :) = {ratID, sectionIDs(s), n_trials, ...
