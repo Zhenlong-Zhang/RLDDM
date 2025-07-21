@@ -40,10 +40,15 @@ function ddm_fit_by_section_fminunc
                     bestParams = optParams;
                 end
             end
+            safeLog = @(x) log(max(abs(x), eps));  % eps 2.2e-16
  
-            realParams = [exp(bestParams(1)^2), ...  % k
-                          exp(bestParams(2)), ...    % a
-                          1/(1+exp(-bestParams(3)))];  % T
+            realParams = [ ...
+                10 / (1 + exp(-safeLog(bestParams(1)))), ...  % k  (0,10)
+                10 / (1 + exp(-safeLog(bestParams(2)))), ...  % a  (0,10)
+                1  / (1 + exp(-safeLog(bestParams(3)))), ...  % T  (0,1)
+                bestParams(4)                               % w 
+            ];
+            
  
             all_results(end+1, :) = {ratID, sectionIDs(s), n_trials, ...
                 realParams(1), realParams(2), realParams(3), bestNLL};
