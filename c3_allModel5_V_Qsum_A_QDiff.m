@@ -64,11 +64,13 @@ function rlddm_fit_fixed_params_by_section_fminunc
                     bestParams = optParams;
                 end
             end
+            safeLog = @(x) log(max(abs(x), eps));  % eps 2.2e-16
+ 
             realParams = [ ...
-                10 / (1 + exp(-abs(bestParams(1)))), ...  
-                10 / (1 + exp(-abs(bestParams(2)))), ...  
-                1  / (1 + exp(-abs(bestParams(3)))), ...   
-                bestParams(4)                         
+                10 / (1 + exp(-safeLog(bestParams(1)))), ...  % k  (0,10)
+                10 / (1 + exp(-safeLog(bestParams(2)))), ...  % a  (0,10)
+                1  / (1 + exp(-safeLog(bestParams(3)))), ...  % T  (0,1)
+                bestParams(4)                               % w 
             ];
  
  
